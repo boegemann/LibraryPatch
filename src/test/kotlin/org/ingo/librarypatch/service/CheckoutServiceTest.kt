@@ -39,6 +39,15 @@ class CheckoutServiceTest {
         checkoutService.checkoutBook("978-0-596-52068-7", "1")
     }
 
+    @Test
+    fun `I need to specify the ISBN when checking a book is available`() {
+        val checkoutService = createMockedCheckoutService()
+        val exception = assertThrows<IllegalArgumentException> {
+            checkoutService.isBookAvailableToCheckOut(" ")
+        }
+        assertEquals("ISBN must not be blank", exception.message)
+    }
+
 
     @Test
     fun `I can't check out a book that is already checked out`() {

@@ -114,6 +114,16 @@ class LibrarySearchServiceTest {
     }
 
     @Test
+    fun `I need to specify the ISBN number when searching for books by it's ISBN number`() {
+        val bookRepoMock = BookRepoMockHelper.createDefaultRepoMock()
+        val librarySearchService = LibrarySearchService(bookRepoMock)
+        val exception = assertThrows<IllegalArgumentException> {
+            assertNull(librarySearchService.findBookByIsbn(" "))
+        }
+        assertEquals("ISBN number has to be a non blank String for the search", exception.message)
+    }
+
+    @Test
     fun `I need to specify an ISBN number when searching for a book by isbn`() {
         val bookRepoMock = BookRepoMockHelper.createDefaultRepoMock()
         val librarySearchService = LibrarySearchService(bookRepoMock)
