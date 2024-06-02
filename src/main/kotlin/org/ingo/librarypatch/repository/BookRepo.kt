@@ -3,7 +3,11 @@ package org.ingo.librarypatch.repository
 import org.ingo.librarypatch.model.Book
 import org.ingo.librarypatch.model.BookCategory
 
+/**
+ * Repository interface for Book records
+ */
 interface BookRepo {
+
     /**
      * Creates a new book record in the database and returns the created Book object
      */

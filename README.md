@@ -4,6 +4,7 @@ Example Library implementation as per take home test instructions
 Back-End Test Instructions:
 
 - Please create a GitHub repository containing code for a book lending library. Use the stories below for requirements.
+- Please create a GitHub repository containing code for a book lending library. Use the stories below for requirements.
 
 - This is just a text-based exercise - no GUI code is required.
 

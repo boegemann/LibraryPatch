@@ -3,6 +3,9 @@ package org.ingo.librarypatch.repository
 import org.ingo.librarypatch.model.User
 import org.ingo.librarypatch.model.UserRole
 
+/**
+ * Repository interface for User records
+ */
 interface UserRepo {
     /**
      * Creates a new user record in the database and returns the created User object
